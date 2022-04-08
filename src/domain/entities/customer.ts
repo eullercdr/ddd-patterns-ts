@@ -1,10 +1,11 @@
 import { Address } from "./address";
 
 export default class Customer {
-  _id: string;
-  _name: string;
-  _address!: Address;
-  _active: boolean;
+  private _id: string;
+  private _name: string;
+  private _address!: Address;
+  private _active: boolean;
+  private _rewardsPoints: number = 0;
 
   constructor(id: string, name: string) {
     this._id = id;
@@ -45,8 +46,16 @@ export default class Customer {
     this._active = true;
   }
 
+  get rewardsPoints(): number {
+    return this._rewardsPoints;
+  }
+
   deactivate(): void {
     this._active = false;
+  }
+
+  addRewardPoints(points: number): void {
+    this._rewardsPoints += points;
   }
 
   changeName(name: string): void {

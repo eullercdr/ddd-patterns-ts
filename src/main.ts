@@ -1,7 +1,7 @@
-import { Address } from "./entities/address";
-import Customer from "./entities/customer";
-import Order from "./entities/order";
-import OrderItem from "./entities/order-item";
+import { Address } from "./domain/entities/address";
+import Customer from "./domain/entities/customer";
+import Order from "./domain/entities/order";
+import OrderItem from "./domain/entities/order-item";
 
 let customer = new Customer('123','Euller Cristian');
 const address = new Address( 'Av. Brasil', 'São Paulo', 'SP', '01310-000');
